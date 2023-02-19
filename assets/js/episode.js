@@ -14,6 +14,7 @@ const item = items[document.location.search.split("=")[1]];
 console.log(item)
 
 window.onload = function() {
+    document.title = `${item.title[1]} | Jennifer Letellier`;
     document.getElementById("audio").src = item.enclosure._url;
     document.getElementById("title").innerText = item.title[1];
     document.getElementById("description").innerHTML = item.description.split("------")[0].slice(0, -3);

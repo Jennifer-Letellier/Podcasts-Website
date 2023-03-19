@@ -15,7 +15,7 @@ window.onload = function () {
         const newElement = document.createElement("div");
         newElement.className = "episodeItem";
         newElement.innerHTML = `
-            <img class="cover" src="${(item.image) ? item.image._href : "https://media.redcircle.com/images/2022/4/3/16/62e79485-42d5-408e-9976-f482fee52c31_0d56e0b6-12c3-4d22-a71e-5f5a7f5a48bf_logo.jpg"}">
+            <img class="cover" src="${(item.image) ? item.image._href : jsonFeed.rss.channel.image._href}">
             <div class="meta">
                 <h2>${item.title[1]}</h2>
                 <p>${days[new Date(item.pubDate).getDay()]} ${new Date(item.pubDate).getDate()} ${months[new Date(item.pubDate).getMonth()]} ${new Date(item.pubDate).getFullYear()}</p>

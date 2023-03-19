@@ -19,6 +19,6 @@ window.onload = function() {
     document.getElementById("audio").src = item.enclosure._url;
     document.getElementById("title").innerText = item.title[1];
     document.getElementById("description").innerHTML = item.description.split("------")[0].slice(0, -3);
-    document.getElementById("cover").src = (item.image) ? item.image._href : "https://media.redcircle.com/images/2022/4/3/16/62e79485-42d5-408e-9976-f482fee52c31_0d56e0b6-12c3-4d22-a71e-5f5a7f5a48bf_logo.jpg";
+    document.getElementById("cover").src = (item.image) ? item.image._href : jsonFeed.rss.channel.image._href;
     document.getElementById("date").innerText = `${days[new Date(item.pubDate).getDay()]} ${new Date(item.pubDate).getDate()} ${months[new Date(item.pubDate).getMonth()]} ${new Date(item.pubDate).getFullYear()}`;
 }
